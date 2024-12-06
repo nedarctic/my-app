@@ -1,40 +1,45 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export const Header = () => {
+    const pathname = usePathname();
     return (
         <header>
             <nav className="bg-white text-black">
-                <div className="container mx-auto px-4 flex justify-between items-center h-20">
-                    <div className="text-lg font-bold">Portfolio</div>
+                <div className="container mx-auto px-4 flex justify-between items-center h-32">
+                    <Link href="/" className={pathname === "/" ? "underline text-2xl" : "text-2xl text-black"}>Portfolio</Link>
 
-                    <ul className="hidden md:flex space-x-6">
-                        <li>
-                            <a href="#" className="hover:text-gray-300">
+                    <div className="hidden md:flex space-x-6">
+                        <div>
+                            <Link href="/about" className={pathname === "/about" ? "underline" : "hover:text-gray-300"}>
                                 About Me
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-gray-300">
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href="/skills" className={pathname === "/skills" ? "underline" : "hover:text-gray-300"}>
                                 Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-gray-300">
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href="/services" className={pathname === "/services" ? "underline" : "hover:text-gray-300"}>
                                 Services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-gray-300">
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href="/work" className={pathname === "/work" ? "underline" : "hover:text-gray-300"}>
                                 Work
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="hover:text-red-600 p-4 border-2 border-black"
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                href="/contact"
+                                className={pathname === "/contact" ? "bg-black border-white p-4 border-2 text-white" : "text-black border-black p-4 border-2 hover:text-gray-300"}
                             >
                                 Get in touch!
-                            </a>
-                        </li>
-                    </ul>
+                            </Link>
+                        </div>
+                    </div>
 
                     <button className="md:hidden text-black hover:text-lg focus:outline-none">
                         <svg
