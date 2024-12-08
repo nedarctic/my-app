@@ -10,36 +10,36 @@ export const Header = () => {
                 <div className="container mx-auto px-4 flex justify-between items-center h-32">
                     <Link href="/" className={pathname === "/" ? "underline text-2xl" : "text-2xl text-black"}>Portfolio</Link>
 
-                    <div className="hidden md:flex space-x-6">
-                        <div>
+                    <ul className="hidden md:flex space-x-6">
+                        <li>
                             <Link href="/about" className={pathname === "/about" ? "underline" : "hover:text-gray-300"}>
                                 About Me
                             </Link>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <Link href="/skills" className={pathname === "/skills" ? "underline" : "hover:text-gray-300"}>
                                 Skills
                             </Link>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <Link href="/services" className={pathname === "/services" ? "underline" : "hover:text-gray-300"}>
                                 Services
                             </Link>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <Link href="/work" className={pathname === "/work" ? "underline" : "hover:text-gray-300"}>
                                 Work
                             </Link>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <Link
                                 href="/contact"
                                 className={pathname === "/contact" ? "bg-black border-white p-4 border-2 text-white" : "text-black border-black p-4 border-2 hover:text-gray-300"}
                             >
                                 Get in touch!
                             </Link>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
                     <button className="md:hidden text-black hover:text-lg focus:outline-none">
                         <svg
